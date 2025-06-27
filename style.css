@@ -235,7 +235,64 @@ footer .questions {
     border-top: 1px solid #ddd;
 }
 
+/* Prominent disclaimer banner */
+.project-disclaimer {
+    background-color: #ffcc00;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1000;
+    border-bottom: 2px solid #000;
+}
 
+/* Make disclaimer text more visible */
+.disclaimer {
+    background-color: #222;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border-left: 4px solid #ffcc00;
+}
+
+.disclaimer p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/* Style for demo buttons to distinguish from real ones */
+.btn-demo {
+    background-color: #ff9900 !important;
+    color: #000 !important;
+    border: 1px solid #000 !important;
+}
+
+/* Watermark effect for screenshots */
+.secImg::after {
+    content: "DEMONSTRATION ONLY";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: rgba(255,255,255,0.7);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* Responsive adjustments for disclaimer */
+@media screen and (max-width: 768px) {
+    .project-disclaimer {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .disclaimer p {
+        font-size: 12px;
+    }
+}
 
 
 @media screen and (max-width: 1300px) {
